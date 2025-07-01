@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="en" class="transition duration-300">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Ray Dar | Portfolio</title>
+
+<script>
+  AOS.init();
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  function openModal(imgSrc) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.classList.remove("hidden");
+    modalImg.src = imgSrc;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").classList.add("hidden");
+  };
+
+</script>
+
+  <!-- Tailwind CSS -->
+
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS Animate on Scroll -->
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { opacity: 0; transition: opacity 1.5s ease; }
+    body.loaded { opacity: 1; }
+    .float { animation: float 4s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      html {
+    scroll-behavior: smooth;
+    }}
+    <style>
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .bg-noise {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  }
+</style>
+
+  </style>
+
+<style>
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.animate-ping-slow {
+  animation: ping-slow 6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+</style>
+
+
+<!-- AOS CSS in <head> -->
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+</head>
+
+<!-- AOS JS before </body> -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<body class="bg-gray-50 text-gray-800 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Header -->
+  <header class="bg-black text-white shadow fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-white">John Ray Dar</h1>
+
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-purple-400">Home</a>
+      <a href="#about" class="hover:text-purple-400">Experience</a>
+      <a href="#projects" class="hover:text-purple-400">Skills</a>
+      <a href="#scenarios" class="hover:text-purple-400">Real World Scenarios</a>
+      <a href="#tech" class="hover:text-purple-400">Tech Stack</a>
+      <a href="#certification" class="hover:text-purple-400">Certification</a>
+      <a href="#contact" class="bg-purple-600 px-4 py-2 rounded text-white hover:bg-purple-700 transition">Contact</a>
+    </nav>
+
+    <!-- Hamburger for Mobile -->
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-black text-white px-4 pb-4 space-y-2 text-center">
+    <a href="#home" class="block hover:text-purple-400">Home</a>
+    <a href="#about" class="block hover:text-purple-400">Experience</a>
+    <a href="#projects" class="block hover:text-purple-400">Skills</a>
+    <a href="#scenarios" class="block hover:text-purple-400">Real World Scenarios</a>
+    <a href="#tech" class="block hover:text-purple-400">Tech Stack</a>
+    <a href="#certification" class="block hover:text-purple-400">Certification</a>
+    <a href="#contact" class="block bg-purple-600 px-4 py-2 rounded hover:bg-purple-700 transition">Contact</a>
+  </div>
+</header>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+          mobileMenu.classList.remove('scale-95', 'opacity-0');
+        }, 10);
+      } else {
+        mobileMenu.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+      }
+    });
+  </script>
+
+
+  <!-- intro -->
+
+ <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-up">
+  <div class="absolute top-0 left-0 w-full h-full bg-noise opacity-10 z-0"></div>
+
+  <!-- Left Side - Image -->
+  <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+  <img 
+    src="images/picture-Photoroom.png" 
+    alt="John Ray Dar"
+    class="rounded-lg object-cover w-full shadow-xl animate-float transform transition-transform duration-500 hover:scale-110"
+    />
+</div>
+  <!-- Right Side - Text -->
+  <div class="md:w-1/2 md:pl-12 text-white z-10 space-y-6 text-center md:text-left">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+      I'm John.<br />
+      A Service Desk Analyst<br />
+      <span class="text-gray-400">based in the Philippines.</span>
+    </h1>
+    <p class="text-gray-400 text-lg leading-relaxed">
+    a Service Desk Analyst who thrives in high-pressure environments, managing incidents, accounts, and SLAs with precision. I turn problems into solutions — one ticket at a time.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-105 transition duration-300">Get in Touch</a>
+      <a href="asset/John_Ray_Dar_RESUME CV (1).pdf" download class="border border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transform hover:scale-105 transition duration-300">Download CV</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- work exp -->
+
+  <section id="about" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-right">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-extrabold text-purple-400 mb-10 tracking-tight">💼 Work Experience</h2>
+    
+    <div class="bg-gray-800 rounded-3xl shadow-xl p-8 text-left transition transform hover:scale-[1.01] hover:shadow-2xl">
+      <h3 class="text-2xl font-bold text-purple-300 mb-4">
+        IT Service Desk Analyst 
+        <span class="text-sm font-medium text-gray-400">| 2023 – Present</span>
+      </h3>
+      
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 leading-relaxed">
+        <li><strong>Managed</strong> 200+ Active Directory accounts and onboarding of new users.</li>
+        <li><strong>Resolved</strong> over 50 daily support tickets using ServiceNow with high satisfaction rates.</li>
+        <li><strong>Contributed</strong> to an internal knowledge base to streamline troubleshooting.</li>
+        <li><strong>Monitored</strong> SLA dashboards to proactively prevent breaches and delays.</li>
+        <li><strong>Handled</strong> support tickets via CRM tools: updating logs, resolving cases, and maintaining SLA compliance.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Skills -->
+
+  <section id="projects" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold mb-12 text-purple-400 tracking-wide">💡 My Skills</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in">
+        <div class="text-4xl mb-3 text-purple-400">🛠️</div>
+        <h3 class="text-xl font-bold text-purple-300">ServiceNow Ticketing</h3>
+        <p class="text-gray-300 mt-2">Improved ticket resolution by 30% through efficient handling and escalation.</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-3 text-purple-400">🧑‍💻</div>
+        <h3 class="text-xl font-bold text-purple-300">Active Directory</h3>
+        <p class="text-gray-300 mt-2">Managed accounts, password resets, and group memberships for 200+ users.</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-3 text-purple-400">🚨</div>
+        <h3 class="text-xl font-bold text-purple-300">Incident Handling</h3>
+        <p class="text-gray-300 mt-2">Resolved incidents quickly and maintained SLA compliance through clear documentation.</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl mb-3 text-purple-400">📋</div>
+        <h3 class="text-xl font-bold text-purple-300">CRM</h3>
+        <p class="text-gray-300 mt-2">Handled ticket management, case tracking, SLA monitoring, and client communication using CRM tools.</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-4xl mb-3 text-purple-400">☁️</div>
+        <h3 class="text-xl font-bold text-purple-300">Amazon Web Services</h3>
+        <p class="text-gray-300 mt-2">Handled inbound support calls using Amazon Connect cloud contact center.</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="zoom-in" data-aos-delay="500">
+        <div class="text-4xl mb-3 text-purple-400">📧</div>
+        <h3 class="text-xl font-bold text-purple-300">Email Support</h3>
+        <p class="text-gray-300 mt-2">Managed inboxes and resolved technical issues through professional, timely email responses.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--Real world scenarios-->
+
+ <section id="scenarios" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-right">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6 text-purple-400">🛠 Real-World Scenarios</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md transition duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1">
+        <h3 class="text-xl font-semibold mb-2 text-purple-300">🔧 Domain Login Failure</h3>
+        <p class="text-gray-300 text-sm">
+          Resolved a login issue for 30+ users using Active Directory by identifying replication delays and re-syncing affected objects. Completed within SLA, minimizing downtime.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md transition duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1">
+        <h3 class="text-xl font-semibold mb-2 text-purple-300">📊 SLA Breach Prevention</h3>
+        <p class="text-gray-300 text-sm">
+          Proactively monitored ServiceNow dashboards to identify aging tickets. Coordinated with Level 2 support to escalate critical tickets—helped team maintain 100% SLA compliance that week.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md transition duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1">
+        <h3 class="text-xl font-semibold mb-2 text-purple-300">🔐 Password Reset & MFA Unlock</h3>
+        <p class="text-gray-300 text-sm">
+          Resolved a login issue by resetting the user's password in Active Directory and unlocking their MFA token, ensuring access was restored within SLA.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md transition duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1">
+        <h3 class="text-xl font-semibold mb-2 text-purple-300">📱 Mobile Email Setup Issue</h3>
+        <p class="text-gray-300 text-sm">
+          Assisted an executive with configuring corporate email on a mobile device, ensuring secure access and proper sync of calendar and contacts.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Tool tech stack --> 
+ 
+<section id="tech" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-right">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6 text-purple-400">🧰 Tools & Tech Stack</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-center">
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/snow.gif" alt="ServiceNow" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">ServiceNow</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="https://img.icons8.com/color/48/000000/windows-10.png" alt="Windows" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">Windows OS</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/org.gif" alt="Active Directory" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">Active Directory</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/email.gif" alt="Email" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">Email</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/sap.png" alt="SAP" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">SAP</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/java.gif" alt="CRM" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">CRM</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/rtouble.gif" alt="Troubleshooting" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">Troubleshooting</p>
+      </div>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition group">
+        <img src="images/AWS.png" alt="AWS" class="mx-auto mb-2">
+        <p class="text-sm font-medium text-gray-300 group-hover:text-purple-400">Amazon Web Services</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Certifications -->
+
+  <section id="certification" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-10 text-purple-400">🎓 Certifications</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div onclick="openModal('images/cert.jpg')" class="bg-gray-800 p-6 rounded-2xl shadow hover:shadow-2xl transform hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold text-blue-300">Information Security</h3>
+        <p class="text-gray-400">Nov 2024</p>
+        <img src="images/cert.jpg" class="w-28 h-28 mx-auto mt-4 object-cover rounded-lg shadow-inner" />
+      </div>
+
+      <div onclick="openModal('images/cert2.jpg')" class="bg-gray-800 p-6 rounded-2xl shadow hover:shadow-2xl transform hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold text-blue-300">Dimension of Data Privacy</h3>
+        <p class="text-gray-400">Nov 2024</p>
+        <img src="images/cert2.jpg" class="w-28 h-28 mx-auto mt-4 object-cover rounded-lg shadow-inner" />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <div class="relative">
+      <img id="modal-img" src="" class="max-h-[80vh] rounded-lg shadow-lg border-4 border-white" />
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-white bg-red-600 px-3 py-1 rounded hover:bg-red-700">X</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact -->
+
+<section id="contact" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-gray-900 pt-24 relative overflow-hidden" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h2 class="text-4xl font-extrabold mb-6 text-purple-400">📬 Contact Me</h2>
+    <p class="text-xl font-semibold text-blue-400 mb-2">📞 +63 955 569 1611</p>
+    <p class="text-gray-400 mb-6">
+      📧 <a href="mailto:johnraydar23@gmail.com" class="text-blue-300 underline hover:text-blue-500 transition">johnraydar23@gmail.com</a>
+    </p>
+
+    <form class="space-y-4 text-left">
+      <input 
+        type="text" 
+        placeholder="Your Name" 
+        class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required 
+      />
+      <input 
+        type="email" 
+        placeholder="Your Email" 
+        class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required 
+      />
+      <textarea 
+        placeholder="Your Message" 
+        rows="5" 
+        class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      ></textarea>
+
+      <!-- ✅ SEND BUTTON -->
+      <div class="text-center pt-4">
+        <button 
+          type="submit" 
+          class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 transition transform shadow-lg"
+        >
+          🚀 Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+
+  <footer class="bg-gray-800 text-white py-6 text-center dark:bg-gray-950">
+    <p>&copy; 2025 John Ray Dar. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+
+  <script>
+    AOS.init();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    function openModal(imgSrc) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.classList.remove("hidden");
+      modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").classList.add("hidden");
+    };
+  </script>
+</body>
+</html>
+
